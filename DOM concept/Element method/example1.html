@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="display">
+        <h1>HELLO WORLD</h1>
+    </div>
+    <script>
+        // let h1Tag = document.getElementById('heading')
+        
+        let div = document .querySelector("#display")
+        //display .innerHTML = <h1> HELLO JSPIDERS</h1>  //replace content
+
+        let myTag = document.createElement("p")
+        myTag.innerText ="HELLO JSPIDER"
+
+        div. appendChild(myTag)
+
+        div.spanTag =document.createElement ("span")
+        spanTag.textContent ="THIS IS A SPAN TAG"
+
+        div. appendChild(spanTag)
+
+        div.removeChild (myTag)
+    </script>
+</body>
+</html>

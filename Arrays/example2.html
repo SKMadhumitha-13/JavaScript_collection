@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let numbers =[10,20,30,40,50]
+        //assignment
+
+        numbers[0] =100
+        console.log(numbers); //[100,20,30,40,50]
+
+        numbers[10]=3000
+        console.log(numbers);  //[100,20,30,40,50,empty*5,3000]
+
+        console.log(numbers[5]); //undefined
+
+        console.log(numbers[10]);   //3000
+
+        //deleting
+        delete numbers[0]
+        console.log(numbers);   //[empty,20,30,40,50,empty*5,3000]
+        
+    </script>
+</body>
+</html>

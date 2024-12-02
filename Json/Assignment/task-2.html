@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+        }
+
+        .editor-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        textarea {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #0b0b0b;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function updateCounts() {
+            var text = document.getElementById('textInput').value;
+            var totalChars = text.length;
+            var totalWords = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+            document.getElementById('charCount').innerText = totalChars;
+            document.getElementById('wordCount').innerText = totalWords;
+        }
+
+        function removeText() {
+            document.getElementById('textInput').value = '';
+            updateCounts();
+        }
+
+        function deleteLastChar() {
+            var text = document.getElementById('textInput').value;
+            document.getElementById('textInput').value = text.slice(0, -1);
+            updateCounts();
+        }
+    </script>
+</head>
+<body>
+
+    <div class="editor-container">
+        <h2>Text Editor</h2>
+        
+        <textarea id="textInput" oninput="updateCounts()" rows="4" cols="30" placeholder="Enter your text here"></textarea><br><br>
+        
+        <p>Total no of chars: <span id="charCount">0</span></p>
+        <p>Total no of words: <span id="wordCount">0</span></p>
+        
+        <button onclick="removeText()">Remove</button>
+        <button onclick="deleteLastChar()">Delete last char</button>
+    </div>
+
+</body>
+</html>

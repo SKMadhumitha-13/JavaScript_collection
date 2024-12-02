@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click to start</button>
+    <button id="clear">Click to Stop</button>
+    <script>
+       // let btn = document.q("click" ,()=>{
+          //  console.log("btn is clicked");
+         // document.body.style.background="skyblue"
+         let btn = document.querySelector("button")
+         let clrbtn = document.getElementById("clear")
+         let timeout
+         let bgchange = () => {
+            console.log("btn is clicked");
+            document.body.style.background ="skyblue"
+         }
+         btn.addEventListener("click", () =>{
+            timeout = setTimeout(bgchange,2000) 
+         })
+           clrbtn.addEventListener("click", () =>{
+            if (timeout) {
+                clearTimeout (timeout)
+            } 
+            else{
+                alert("timeout not started")
+            }
+           })
+    </script>
+</body>
+</html>

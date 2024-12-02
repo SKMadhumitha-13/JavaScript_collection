@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    < !-- <h1 id = "heading" class="text"> HELLO WORLD!! </h1>...
+     < !-- <div id= "display">...
+
+        <div class="item" id="abc"> THIS IS A DIV TAG</div>
+<script>
+    //let h1Tag = document.getElementById("heading")
+
+    let divTag = document.querySelector(".item")
+    //console.log(divtag);
+
+    let result1 =divTag.getAttribute("id")
+    console.log (result1);       //abc
+
+    divTag.setAttribute("align","center")       //set the attribute value
+
+    let hasAlign = divTag.hasAttribute("align")
+    console.log(hasAlign)        //true
+
+</script>
+</body>
+</html>

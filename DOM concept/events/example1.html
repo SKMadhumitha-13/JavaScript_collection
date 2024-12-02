@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="printMSG()" 
+    onmouseover="printCount()">CLICK ME</button>
+    <script>
+        let mybtn = document.getElementById("btn")
+        let count = 0
+        function printMSG(){
+            console.log("HEY SOMEBODY CLICKED ME");
+        }
+        const printCount = ()=>{
+            console.log(++count);
+        }
+        //element.event =functionRef
+        mybtn.click =printMSG
+        mybtn.onmouseover = printCount
+    </script>
+</body>
+</html>

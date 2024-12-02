@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //iterating array elements
+
+         let arr=["a","b","c","d","e"]
+
+         //for
+         for(let i=0; i<arr.length; i++)
+            {
+                console.log(arr[i]);
+            }
+
+         //while
+         let i=0
+         while (i<arr.length)
+            {
+                console.log(arr[i]);
+                i++
+            }
+        //do while
+        let j=0
+        do {
+            console.log(arr[j])
+            j++
+        }
+        while(j<arr.length)
+
+        //for in 
+        for (let index in arr){
+            console.log(index,arr[index]);
+        }
+                
+        //for of 
+        for (let value of arr){
+            console.log(value);
+        }
+    </script>
+</body>
+</html>

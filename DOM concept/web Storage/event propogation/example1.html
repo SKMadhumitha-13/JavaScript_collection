@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .item1{
+            height: 300px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+        .item2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 200px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">
+        <div class="itme2">
+            <button id="child">CLICK HERE</button>
+        </div>
+    </div>
+    <script>
+        let item1 =document.querySelector(".item1")
+        let item2 =document.querySelector(".item2")
+        let ibtn =document.getElementById("child")
+
+       //bubbling phase ===========
+       // item1.addEventListener("click",()=>{
+         //   console.log("item1 is clicked");
+        //},{capture:true})
+
+        //item2.addEventListener("click" ,()=>{
+         //   console.log("item2 is clicked");
+        //},{capture:true})
+
+        //btn.addEventListener("click", ()=>{
+          //  console.log("btn is clicked");
+        //},{capture:true})
+
+        ////stop propogation==============
+        item1.addEventListener("click",()=>{
+           console.log("item1 is clicked");
+        })
+
+        item2.addEventListener("click" ,()=>{
+            console.log("item2 is clicked");
+        })
+
+        btn.addEventListener("click", ()=>{
+           console.log("btn is clicked");
+        })
+
+    </script>
+</body>
+</html>

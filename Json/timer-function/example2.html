@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click To Start</button>
+    <button id="clear">Click to Stop</button>
+    <script>
+        let btn = document.querySelector("button")
+        let clrBtn = document.getElementById("clear")
+        let flag = true
+        let interval
+        let bgChange = () => {
+            console.log("btn is clicked");
+            if (flag) {
+                document.body.style.background = "skyblue"
+                flag = false
+            } else {
+                document.body.style.background = "pink"
+                flag = true
+            }
+        }
+        btn.addEventListener("click", () => {
+            interval = setInterval(bgChange, 100)
+        })
+        clrBtn.addEventListener("click", () => {
+            if (interval) {
+                clearInterval(interval)
+            } else {
+                alert("Not started yet")
+            }
+        })
+    </script>
+</body>
+
+</html>

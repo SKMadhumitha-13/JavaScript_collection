@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <button id="inc">+</button>
+            <h1 id="count"></h1>
+            <button id="dec">-</button>
+        </div>
+    </div>
+    <script>
+    let incBtn = document.getElementById("inc");
+    let decBtn = document.getElementById("dec");
+    let countTag = document.querySelector("#count");
+    let outerBox = document.querySelector(".outer-box");
+    let count = 0;
+    countTag.innerHTML = count;
+
+    function updateOuterBoxColor() {
+        if (count < 0) {
+            outerBox.style.backgroundColor = "black";
+        } else if (count === 0) {
+            outerBox.style.backgroundColor = "white";
+        } else if (count > 0 && count <= 5) {
+            outerBox.style.backgroundColor = "blue";
+        } else if (count === 6) {
+            outerBox.style.backgroundColor = "yellow";
+        } else if (count > 6 && count <= 10) {
+            outerBox.style.backgroundColor = "brown";
+        } else if (count > 10) {
+            outerBox.style.backgroundColor = "red";
+        }
+    }
+
+    function increment() {
+        count++;
+        countTag.innerHTML = count;
+        updateOuterBoxColor();
+    }
+
+    function decrement() {
+        count--;
+        countTag.innerHTML = count;
+        updateOuterBoxColor();
+    }
+
+    incBtn.onclick = increment;
+    decBtn.onclick = decrement;
+    </script>
+</body>
+</html>

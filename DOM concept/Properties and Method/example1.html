@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id= "heading " class =" text"> Hello World !!</h1>
+    <p id =" para" class="text">"Welcome To DOM"</p>
+    <b class="text"> JSPIDERS</b>
+    <h1>DOCUMENT OBJECT MODEL</h1>
+    <script>
+        let h1Tag = document.getelementByID ("heading")
+        let myLink = document.querySelector("a")
+
+        //content
+        h1Tag.innerText = "<mark>HELLO JSPIDERS!!! <mark>"
+        h1Tag.textcontent = "<mark>HELLO JSPIDERS!!<mark>"
+
+        h1Tag.innerHTML ="<mark>HELLO JSPIDER!!<mark>"
+
+        //style(inline css)
+        h1Tag.style.margin = "50px"
+        h1Tag.style.backgroundColor = "green"
+        h1Tag.style.color = "red"
+
+        //attributes
+        h1Tag.align = "center"
+        myLink.href = "https://jspiders.com/"
+
+    </script>
+</body>
+</html>

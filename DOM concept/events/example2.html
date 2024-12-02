@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="inc">+</button>
+    <h1 id="count"></h1>
+    <button id="dec">-</button>
+   <script>
+    let incbtn = document.getElementById("inc")
+    let decbtn = document.getElementById("dec")
+    let countTag = document.querySelector("#count")
+
+    let count=0
+    countTag . innerHTMl =count
+    function increment(){
+        count++
+        countTag.innerHTML = count
+    }
+    incBtn.onclick = increment
+    function decrement(){
+        count --
+        countTag.innerHTML =count
+    }
+   </script> 
+</body>
+</html>

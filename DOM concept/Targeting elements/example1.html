@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id= "heading " class =" text"> Hello World !!</h1>
+    <p id =" para" class="text">"Welcome To DOM"</p>
+    <b class="text"> JSPIDERS</b>
+    <h1>DOCUMENT OBJECT MODEL</h1>
+    <script>
+        let h1Tag = document.getElementById("heading")
+        console.log( h1Tag);     ///First Matched Element
+
+        let paraTag = document.querySelector("#para")
+        console.log(paraTag);     /// First Matched Element
+
+        let allTags = document.getElementsByTagName("h1")
+        console.log(allTags);     ///HTMLCollection
+
+        let allH1 = document.getElementsByClassName("text")
+        console.log(allH1);      ///HTMLCollection
+
+        let allElems = document.querySelectorAll(".text")
+        console.log(allElems);   ///NodeList
+
+    </script>
+</body>
+</html>

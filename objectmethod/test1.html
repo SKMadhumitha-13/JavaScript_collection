@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let student ={name:"Rocky", age: 27, address:"KGF"}
+
+    //keys
+       // let result= Object.keys(student)
+        //console.log(result);  //['name','age',address]
+
+    //values
+       // let result2=Object.values(student)
+        //console.log(result2);  //['Rocky',27,'KGF']
+
+    //entries
+        //let result3=Object.entries(student)
+        //console.log(result3)  //[['name','Rocky'],['age',27],['address','KGF']]
+
+    //freeze
+        //student.name="Rahul"
+        //console.log(student); //{name:'Rahul',age:27, address:'KGF'}
+        //student.email="abcd@gmail.com"
+        //console.log(student);  //{name:'Rahul',age:27, address:'KGF',email:'abcd@gmail.com'}
+
+        Object.freeze(student)
+        student.name="Rahul"
+        console.log(student);    //{name:'Rahul',age:27, address:'KGF'}
+        student.email="rocky@gmail.com"
+        console.log(student);      //{name:'Rahul',age:27, address:'KGF'}
+
+    //seal
+        Object.seal(student)
+        student.email="rocky@gmail.com"
+        console.log(student);   //{name:"Rocky", age: 27, address:"KGF"}
+        student.name="Rahul"
+        console.log(student);   //{name:"Rocky", age: 27, address:"KGF"}
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 

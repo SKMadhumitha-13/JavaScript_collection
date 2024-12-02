@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        main();
+        function main()
+        {
+            let d1=new Date();
+            let Day=d1.getDay();
+            let toDay="Today is";
+            switch(Day)
+            {
+                case 0:
+                    toDay+="Sunday";
+                    break;
+                case 1:
+                    toDay+="Monday";
+                    break;  
+                case 2:
+                    toDay+="Tuesday";
+                    break;
+                case 3:
+                    toDay+="Wednesday";
+                    break;
+                case 4:
+                    toDay+="Thursday";
+                    break;
+                case 5:
+                    toDay+="Friday";
+                    break;
+                case 6:
+                    toDay+="Saturday";
+                    break;
+                default:
+                    toDay+="invalid";  
+            }
+            console.log(toDay);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
